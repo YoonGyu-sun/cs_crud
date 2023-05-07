@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <style>
+        p{
+            text-align:center;
+        }
+    </style>
+
+    <script>    
+    function login(){
+            if(document.getElementById("id").value==""){
+                alert("아이디를 입력하세요");
+            }else if(document.getElementById("pwd").value==""){
+                alert("비밀번호를 입력하세요");
+            }else{
+                document.frm.submit();
+            }
+        }
+
+    function register(){
+        document.location.href="register.php";
+    }
+    </script>
+
+</head>
+<body>
+    <p><h1>로그인 페이지</h1></p>
+        <p>
+            <form action="/cs/logined.php" method="POST" name="frm" onsubmit="return false">
+
+                <div>
+                    <p>ID: <input type="text" id="id" name="id" placeholder="ID"></p>
+                    <p>PassWord: <input type="password" id="pwd" name="pwd" placeholder="PWD"></p>
+                    <p><button onclick="login()">LOGIN</button></p>
+                </div>            
+        </p>       
+        <p><button type="button" onclick="register()">회원가입</button></p>
+        
+    
+</body>
+</html>

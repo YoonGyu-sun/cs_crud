@@ -1,0 +1,22 @@
+table, th, td {
+    border : 3px solid grey;
+}
+table {
+    border-collapse:collapse; 
+}
+td { text-align: center; height:45px;}
+th {height:28px;}
+div h3 {
+    float: right;
+    padding: 50px;
+}
+div button{
+    float: right;
+}
+button input{
+    float: right;
+}
+button{
+    
+}
+    
