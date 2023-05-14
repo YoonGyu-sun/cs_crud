@@ -1,0 +1,99 @@
+#banner_online {
+    height: 270px;
+    width: 350px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 7px 1px grey;
+    background-color: white;
+    z-index: 9999;
+    margin-left: 36%;
+    margin-top: 6%;
+    display: none;
+    position: fixed;
+}
+#banner_online h2 {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+#banner_online p .second {
+    margin-left: 6px;
+}
+
+.pop_content {
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+#banner_online_how {
+    height: 78px;
+    width: 444px;
+    margin-left: 28px;
+    border: 1px solid #82bf77;
+    margin-top: 22px;
+}
+
+#banner_online_how h3 {
+    font-size: 12px;
+    margin-left: 6px;
+    margin-top: 16px;
+}
+
+#close_button {
+    float: right;
+    margin-top: -3px;
+}
+
+.p_bottom {
+    margin-left: 30px;
+}
+
+#modal {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+}
+/* 새로 만든 거 */
+
+#banner_online1 {
+    height: 270px;
+    width: 350px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 7px 1px grey;
+    background-color: white;
+    z-index: 9999;
+    margin-left: 36%;
+    margin-top: 6%;
+    display: none;
+    position: fixed;
+}
+
+#modal1 {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: none;
+  }
+
+  /* #banner_online1_how {
+    height: 78px;
+    width: 444px;
+    margin-left: 28px;
+    border: 1px solid #82bf77;
+    margin-top: 22px;
+}
+
+#banner_online1_how h3 {
+    font-size: 12px;
+    margin-left: 6px;
+    margin-top: 16px;
+} */

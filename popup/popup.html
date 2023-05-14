@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>pop</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="\cs\popup\style.css">
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#openPop").click(function() {
+            $("#banner_online").show();
+        });
+    
+        $("#openModalPop").click(function() {
+            $("#banner_online").fadeIn();
+            $("#modal").fadeIn();
+        });
+    
+        $("#close_button").click(function(){
+            $("#banner_online").fadeOut();
+            $("#modal").fadeOut();
+        });
+    });
+
+
+    $(document).ready(function() {
+
+        $("#openPop1").click(function() {
+            $("#banner_online1").show();
+        });
+
+        $("#openModalPop1").click(function() {
+            $("#banner_online1").fadeIn();
+            $("#modal1").fadeIn();
+        });
+
+        $("#close_button1").click(function() {
+            $("#banner_online1").fadeOut();
+            $("#modal1").fadeOut();
+        });
+
+    });
+
+
+
+    
+      function myFunction() {
+        var selectedValue = document.getElementById("mySelect").value;
+        console.log("Selected value: " + selectedValue);
+      }
+      
+    </script>
+
+</head>
+<body>
+    
+<button type="button" id="openPop">레이어팝업 열기</button>
+<button type="button" id="openModalPop">모달 레이어팝업 열기</button>
+<div id= "modal"> 
+</div>
+
+    <div id = "banner_online">
+
+        <div id="close_button" style ="cursor: pointer;"> 
+            <img src="/img/img1.jpg" alt="닫기입니다." width="30" height="30">
+        </div>
+
+        <h2>CATEGORIES</h2>
+        <div class="pop_content">
+            <p>1) Algorithm</p>
+            <p>2) 영어공부</P>
+            <p>3) Deep Learning</p>
+            <p>4) Web</p>
+            <p class="p_bottom">- spring</p>
+            <p class="p_bottom">- javaScript</p>
+            <a style= "float: right; margin-right: 13px;" href="https://bbo-blog.tistory.com/" target="_blank" >뽀블로그 클릭</a>
+        </div>
+
+    </div>
+    <a href="\cs\popup\hi.html"> 하이입니다. </a>
+    <h1>          </h1>
+
+
+    <button type="button" id="openPop1"> 레이어 팝업 테스트 </button>
+    <button type="button" id="openModalPop1"> 모달 레이어 팝업 테스트 </button>
+    <div id ="modal1"></div>
+    
+    <div id = "banner_online1">
+            <div id = "close_button1" style ="cursor:pointer;">
+                <img src="/img/img1.jpg" alt="닫기입니다." width="30" height="30">
+            </div>
+
+            <h1>TEST</h1>
+            <ol>
+                    <li><h2>안녕</h2></li>
+                    <li><h2>하세요</h2></li>
+                    <li><h2>!!</h2></li>
+            </ol>
+    </div>
+
+
+
+    <!-- // onchange 예시 -->
+
+    <select id="mySelect" onchange="myFunction()">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      
+      
+</body>
+</html>
+
+
+

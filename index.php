@@ -12,9 +12,47 @@ include($_SERVER['DOCUMENT_ROOT'].'/cs/include/ss.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/cs/css/index_style.css">
+    <!-- <link rel="stylesheet" href="/css/index_style.css"> -->
     <title>게시판</title>
+<style>
+    table, th, td {
+        border : 3px solid grey;
+    }
+    table {
+        border-collapse:collapse; 
+    }
+    td { text-align: center; height:45px;}
+    th {height:28px;}
+    div h3 {
+        float: right;
+        padding: 50px;
+    }
+    div button{
+        float: right;
+    }
+    button input{
+        float: right;
+    }
+    button{
+        
+    }
+    
+    </style>
+    <script>
+        // Ajax로 서버시간 0.5초마다 출력
+            function sendRequest() {
+			var httpRequest = new XMLHttpRequest();
+			httpRequest.onreadystatechange = function() {
+				if (httpRequest.readyState == XMLHttpRequest.DONE && httpRequest.status == 200 ) {
+					document.getElementById("text").innerHTML = httpRequest.responseText;
+				}
+			};
+			httpRequest.open("GET", "/cs/include/ajax.php");
+			httpRequest.send();
+		}
+		window.setInterval("sendRequest()", 1);	// 매 0.5초마다 Ajax 요청을 보냄.
 
+    </script>
     
  
 
@@ -22,8 +60,12 @@ include($_SERVER['DOCUMENT_ROOT'].'/cs/include/ss.php');
 
 </head>
 <body>
-    <div><h3><?php echo "".$_SESSION['loginid']."님"; ?></h3>
-    <h1>게시판입니다.</h1></div>
+    <div><h3><?php echo "".$_SESSION['loginid']."님"; ?></h3></div>
+    
+    <h2>게시판입니다.</h2>
+    <h2 id ="text"></h2>
+
+    <!-- 만약 if(ajax값이 게시판이면 저것을 불러와라 switch문도 생각해볼것) -->
     <form action="/cs/logout.php" method="POST"> 
     <input type="submit" value="Logout"></button>
     </form> 
